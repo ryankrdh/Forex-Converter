@@ -25,7 +25,7 @@ Will work on deploying it on a server in the future.
 
 ## Built With
 
-- Visual Studio Code (Javascript, Html, CSS)
+- Visual Studio Code (python, flask, forex-python)
 
 ## Authors
 
@@ -34,7 +34,3 @@ Will work on deploying it on a server in the future.
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-Sound effects obtained from https://www.zapsplat.com
-
-Images obtained from https://pixabay.com
