@@ -64,11 +64,28 @@ javascript example:
 
 - How do you collect data from a URL placeholder parameter using Flask?
 
+> request.args('key')
+
+<br>
+
 - How do you collect data from the query string using Flask?
+
+> request.args('key')
+
+<br>
 
 - How do you collect data from the body of the request using Flask?
 
+> request.form('key')
+
+<br>
+
 - What is a cookie and what kinds of things are they commonly used for?
+
+  Cookies are name/string value pair stored in the browser on the client side. Only 4kb storage. Flask's session is powered by cookies. Cookies store information about your online habits and your preference customizing the sites you visit.
+  Set usually from server-side. Can be read by a server and client.
+
+<br>
 
 - What is the session object in Flask?
 
