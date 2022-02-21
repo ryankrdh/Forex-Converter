@@ -89,4 +89,10 @@ javascript example:
 
 - What is the session object in Flask?
 
+  Session object is used to track the session data that is a key-value pair. Session objects are signed so users can't modify the data.
+
+<br>
+
 - What does Flask's `jsonify()` do?
+
+  Jsonify() is a method by flask to return proper JSON data as a response object.
