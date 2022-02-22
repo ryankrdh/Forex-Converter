@@ -2,23 +2,23 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/css/app.css"> -->
     <title>Currency Exchange</title>
 </head>
 <body>
     <form action="/currency" class="user_input">
         <div>
             <label for="convert_from">Converting from </label>
-            <input type="text" name="convert_from" id="convert_from">
+            <input type="text" name="convert_from" placeholder="USD">
         </div>
         <div>
             <label for="convert_to">Converting to </label>
-            <input type="text" name="convert_to" id="convert_to">
+            <input type="text" name="convert_to" placeholder="EUR">
         </div>
         <div>
-            <label for="amount">Amount: </label>
-            <input type="number" name="amount" id="amount">
+            <label for="money_amount">Amount: </label>
+            <input type="text" name="money_amount" placeholder="enter amount">
         </div>
         <div>
             <button type="submit" id="convert_button">Convert</button>

@@ -64,13 +64,13 @@ javascript example:
 
 - How do you collect data from a URL placeholder parameter using Flask?
 
-> request.args('key')
+> request.args['key']
 
 <br>
 
 - How do you collect data from the query string using Flask?
 
-> request.args('key')
+> request.args['key']
 
 <br>
 
