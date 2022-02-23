@@ -31,9 +31,8 @@ def homepage():
     money_amount_input = request.args["money_amount"]
 
     # Testing Edge Cases
-    convert_to_check, convert_from_check = currency_rate.check_input(convert_to_input, convert_from_input)
+    convert_to_check, convert_from_check, amount_check= currency_rate.check_valid_input(convert_to_input, convert_from_input, money_amount_input)
 
-    amount_check = currency_rate.check_valid_amount(money_amount_input)
     
     # Checking for invalid input.
     invalid_inputs = []
@@ -50,9 +49,9 @@ def homepage():
             flash(invalids)
         return render_template("index.html")
 
-    else:
-        convert_to_name, convert_from_name, converted_amount, convert_from_symbol = currency_rate.calculate(convert_to_input, convert_from_input, money_amount_input)
+    # else:
+    convert_to_name, convert_from_name, converted_amount, convert_from_symbol = currency_rate.calculate(convert_to_input, convert_from_input, money_amount_input)
 
-        return render_template("index.html", convert_to_name = convert_to_name, convert_from_name = convert_from_name, converted_amount = converted_amount, money_amount_input = money_amount_input, convert_from_symbol = convert_from_symbol)
+    return render_template("index.html", convert_to_name = convert_to_name, convert_from_name = convert_from_name, converted_amount = converted_amount, money_amount_input = money_amount_input, convert_from_symbol = convert_from_symbol)
 
     # return render_template("index.html")
