@@ -50,8 +50,8 @@ def homepage():
         return render_template("index.html")
 
     # else:
-    convert_to_name, convert_from_name, converted_amount, convert_from_symbol = currency_rate.calculate(convert_to_input, convert_from_input, money_amount_input)
+    convert_to_name, convert_from_name, converted_amount, convert_from_symbol, codes_list = currency_rate.calculate(convert_to_input, convert_from_input, money_amount_input)
 
-    return render_template("index.html", convert_to_name = convert_to_name, convert_from_name = convert_from_name, converted_amount = converted_amount, money_amount_input = money_amount_input, convert_from_symbol = convert_from_symbol)
+    return render_template("index.html", codes_list = codes_list, convert_to_name = convert_to_name, convert_from_name = convert_from_name, converted_amount = converted_amount, money_amount_input = money_amount_input, convert_from_symbol = convert_from_symbol)
 
     # return render_template("index.html")
