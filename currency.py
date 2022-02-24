@@ -15,18 +15,6 @@ class CurrencyCalculator():
         # this will get all the currency codes that you can exchange to with USD.
         self.codes_list = self.currency.get_rates('USD').keys()
 
-# REFACTORED
-    # def check_input(self, convert_to, convert_from):
-    #     '''
-    #     Edge case check for convert_to input
-    #     '''
-    #     if len(convert_to) == 3:
-    #         convert_to = True
-    #     else: 
-    #         convert_to = f"Not a valid code: {convert_to}. Please type in proper exchange symbol for 'converting to'"
-
-
-
     def check_valid_input(self, convert_to, convert_from, money_amount):
         """
         Returns True if input is valid. 
