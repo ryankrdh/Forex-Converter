@@ -42,7 +42,7 @@ class CurrencyCalculator():
             if (int(money_amount) > 0):
                 money_amount_check =  True
 
-        return convert_to_check, convert_from_check, money_amount_check, codes_list
+        return convert_to_check, convert_from_check, money_amount_check
 
     def calculate(self, convert_to, convert_from, money_amount):
         '''
