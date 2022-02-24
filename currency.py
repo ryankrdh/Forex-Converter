@@ -25,42 +25,7 @@ class CurrencyCalculator():
     #     else: 
     #         convert_to = f"Not a valid code: {convert_to}. Please type in proper exchange symbol for 'converting to'"
 
-    #     if len(convert_from) == 3:
-    #         convert_from = True
-    #     else: 
-    #         convert_from = f"Not a valid code: {convert_from}. Please type in proper exchange symbol for 'converting from'"
 
-    #     return convert_to, convert_from
-
-    # def check_valid_amount(self, money_amount):
-    #     '''
-    #     Edge case check for money_amount input
-    #     '''
-    #     check_alpha = money_amount.isalpha()
-    #     if check_alpha:
-    #         money_amount = True
-    #     if int(money_amount) > 0:
-    #         money_amount =  True
-    #     else:
-    #         money_amount =  f"Not a valid amount: {money_amount}. Please type in a proper amount"
-        
-    #     return money_amount
-
-    # def validate_code(self, start, end, amount):
-    #     """Return entered currency code if the input is invalid"""
-    #     start_err = False
-    #     end_err = False
-    #     amount_err = False
-
-    #     if start.upper() not in self.currency_codes:
-    #         start_err = True
-    #     if end.upper() not in self.currency_codes:
-    #         end_err = True
-    #     try:
-    #         Decimal(amount)
-    #     except:
-    #         amount_err = True
-    #     return start_err, end_err, amount_err
 
     def check_valid_input(self, convert_to, convert_from, money_amount):
         """
