@@ -22,3 +22,6 @@ class CurrencyTestCase(TestCase):
         # self.assertFalse(currency_rate.check_valid_input('USD', 'asd', '100'))
         # self.assertFalse(currency_rate.check_valid_input('USDR', 'EUR', '100'))
         # pass
+    
+    def test_calculate(self):
+        self.assertEqual(currency_rate.check_valid_input())
