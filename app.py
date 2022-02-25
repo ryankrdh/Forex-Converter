@@ -18,7 +18,8 @@ def show_forex_form():
     
     return render_template("index.html")
 
-@app.route("/currency", methods="POST")
+#   QUESTION: Methods="POST") when do we use this..? It seems app.route works even without it.
+@app.route("/currency")
 def homepage():
     """
     Displays the currency exchange page.
