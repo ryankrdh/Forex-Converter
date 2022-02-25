@@ -18,7 +18,7 @@ def show_forex_form():
     
     return render_template("index.html")
 
-@app.route("/currency")
+@app.route("/currency", methods="POST")
 def homepage():
     """
     Displays the currency exchange page.
