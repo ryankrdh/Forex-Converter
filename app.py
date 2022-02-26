@@ -55,3 +55,5 @@ def homepage():
 
     return render_template("index.html", convert_to_name = convert_to_name, convert_from_name = convert_from_name, converted_amount = converted_amount, money_amount_input = money_amount_input, convert_from_symbol = convert_from_symbol)
 
+
+
