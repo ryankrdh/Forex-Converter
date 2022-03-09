@@ -19,7 +19,7 @@ def show_forex_form():
     return render_template("index.html")
 
 #   QUESTION: Methods="POST") when do we use this..? It seems app.route works even without it.
-@app.route("/currency")
+@app.route("/currency", methods=['POST'])
 def homepage():
     """
     Displays the currency exchange page.
@@ -38,11 +38,11 @@ def homepage():
     # Checking for invalid input.
     invalid_inputs = []
     if convert_to_check != True:
-        invalid_inputs.append(convert_to_check)
+        invalid_inputs.append(f"Not a valid code: {convert_to_input}. Please type in proper exchange symbol for 'converting to'")
     if convert_from_check != True:
-        invalid_inputs.append(convert_from_check)
+        invalid_inputs.append(f"Not a valid code: {convert_from_input}. Please type in proper exchange symbol for 'converting from'")
     if amount_check != True:
-        invalid_inputs.append(amount_check)
+        invalid_inputs.append(f"Not a valid amount: {money_amount_input}. Please type in a proper amount")
 
     # if invalid_input list is true, it will end the function by returning render_template.
     if invalid_inputs:
