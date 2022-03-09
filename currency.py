@@ -22,19 +22,10 @@ class CurrencyCalculator():
         # Turning dictionary of codes to list so that I can append 'USD'
         codes_list = list(self.codes_list)
         codes_list.append('USD')
-        # convert_to_check = f"Not a valid code: {convert_to}. Please type in proper exchange symbol for 'converting to'"
-        # convert_from_check = f"Not a valid code: {convert_from}. Please type in proper exchange symbol for 'converting from'"
-        # # money_amount_check = True
-        # money_amount_check = f"Not a valid amount: {money_amount}. Please type in a proper amount"
 
         convert_to_check = False
         convert_from_check = False
         money_amount_check = False
-
-
-        # QUESTION:
-        # Calling self.currency.get_rates('USD') in two functions does not work.
-        # code_list = self.currency.get_rates('USD').keys()
 
         if convert_to.upper() in codes_list:
             convert_to_check = True

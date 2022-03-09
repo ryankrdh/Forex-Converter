@@ -11,6 +11,7 @@ class CurrencyTestCase(TestCase):
     """
     Unit tests for currency.py
     """
+    
 # TESTING routes
 
     def test_forex_form(self):
@@ -25,12 +26,12 @@ class CurrencyTestCase(TestCase):
 
     def test_currency_route(self):
         with app.test_client() as client:
-            res = client.post('/currency', data={'convert_to_input':'USD', 'convert_from_input':'EUR', 'money_amount_input': '100'})
+            res = client.post('/currency', query_string={'convert_to':'EUR', 'convert_from':'USD', 'money_amount': '100'})
             html = res.get_data(as_text=True)
-
+            # import pdb
+            # pdb.set_trace()
             self.assertEqual(res.status_code, 200)
-            self.assertIn('United States dollar European Euro € 108.92</p>', html)
-
+            self.assertIn('$ 100 United States dollar European Euro € 108.92', html)
 
 # TESTING check_valid_input function
 
@@ -81,13 +82,4 @@ class CurrencyTestCase(TestCase):
         self.assertTrue(convert_from)
         self.assertTrue(amount)
 
-# TESTING calculate function
-
-    # def test_correct_calculation(self):
-
-        # currency_rate.calculate('USD', 'EUR', '100')
-        # self.assertEqual(currency_rate.calculate('USD', 'EUR', '100'), 'USD', 'EUR', '108.92', '€')
-        # self.assertEqual('EUR')
-        # self.assertEqual('108.92')
-        # self.assertEqual('€')
 

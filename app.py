@@ -34,7 +34,6 @@ def homepage():
     # Testing Edge Cases
     convert_to_check, convert_from_check, amount_check = currency_rate.check_valid_input(convert_to_input, convert_from_input, money_amount_input)
 
-    
     # Checking for invalid input.
     invalid_inputs = []
     if convert_to_check != True:
@@ -44,7 +43,6 @@ def homepage():
     if amount_check != True:
         invalid_inputs.append(f"Not a valid amount: {money_amount_input}. Please type in a proper amount")
 
-    # if invalid_input list is true, it will end the function by returning render_template.
     if invalid_inputs:
         for invalids in invalid_inputs:
             flash(invalids)
